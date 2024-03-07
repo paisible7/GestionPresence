@@ -17,6 +17,7 @@ Dim ligne_debut As Integer: Dim colone_debut As Integer
 Dim ligneFin As Integer: Dim coloneFin As Integer
 Dim ligne_enCours As Integer: Dim colone_enCours As Integer
 
+
 Private Sub affichage_liste_Click()
 
 End Sub
@@ -36,32 +37,32 @@ Private Sub ChoixPrensence_Change()
     Dim choix As String
     choix = ChoixPrensence.Value
 
-    ' Exécuter une action en fonction du choix de l'utilisateur
+    ' Exï¿½cuter une action en fonction du choix de l'utilisateur
     Select Case choix
-        Case "Présent"
-            ' Code à exécuter si l'utilisateur choisit "Présent"
+        Case "Prï¿½sent"
+            ' Code ï¿½ exï¿½cuter si l'utilisateur choisit "Prï¿½sent"
             Selection.Style = "Satisfaisant"
             ActiveCell.FormulaR1C1 = "Present"
             Range("E2").Select
         Case "Absent"
-            ' Code à exécuter si l'utilisateur choisit "Absent"
+            ' Code ï¿½ exï¿½cuter si l'utilisateur choisit "Absent"
             Selection.Style = "Insatisfaisant"
             ActiveCell.FormulaR1C1 = "Absent"
             Range("E2").Select
-        Case "Excusé"
-            ' Code à exécuter si l'utilisateur choisit "Justifié"
+        Case "Excusï¿½"
+            ' Code ï¿½ exï¿½cuter si l'utilisateur choisit "Justifiï¿½"
             Selection.Style = "Neutre"
-            ActiveCell.FormulaR1C1 = "Excusé"
+            ActiveCell.FormulaR1C1 = "Excusï¿½"
             Range("E2").Select
     End Select
 End Sub
 
 Private Sub UserForm_Initialize()
-    ' Ajouter les choix à la ComboBox
+    ' Ajouter les choix ï¿½ la ComboBox
     With ChoixPrensence
-        .AddItem "Présent"
+        .AddItem "Prï¿½sent"
         .AddItem "Absent"
-        .AddItem "Excusé"
+        .AddItem "Excusï¿½"
     End With
 End Sub
 
