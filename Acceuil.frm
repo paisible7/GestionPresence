@@ -61,7 +61,7 @@ Private Sub UserForm_Initialize()
     ' Ajouter les choix � la ComboBox
     With ChoixPrensence
         .AddItem "Pr�sent"
-        .AddItem "Absent"
+        .AddItem "Absent"é
         .AddItem "Excus�"
     End With
 End Sub
